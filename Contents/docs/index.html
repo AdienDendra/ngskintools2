@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0106)https://apps.autodesk.com/RVT/en/Detail/HelpDoc?appId=2231912794620250494&appLang=en&os=Win64&mode=preview -->
+<html lang="en" class=" js canvas canvastext no-touch hashchange history draganddrop rgba multiplebgs borderimage boxshadow textshadow cssgradients csstransitions sessionstorage" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Autodesk App Store - help file</title><link rel="stylesheet" href="./Resources/appstore-combined.min.css"></head>
+<body>
+<div id="main" class="detail-page helpdoc-page clearfix" style="min-height: 619px;">
+    <div id="content">
+        <div id="helpdoc-head">
+            <img id="helpdoc-head-icon" src="./Resources/resized_5ca803cc-8cd1-4cbe-8825-98efaeef156e_.png" alt="ngSkinTools 2">
+            <div id="helpdoc-head-description">
+                <h1 id="helpdoc-product-title">ngSkinTools 2</h1>
+
+                <div class="clear"></div>
+                <hr>
+                <div class="seller">Viktoras Makauskas</div>
+                <div class="description">ngSkinTools is a skinning plugin for Autodesk® Maya®, introducing new concepts to character skinning such as layers, any-pose-mirroring, enhanced paint brushes, true smoothing, and more.</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div id="helpdoc-tag"><a href="#description" class="helpdoc-breadcrumb">Description</a>
+
+                <a href="#generalinfo" class="helpdoc-breadcrumb">General Usage Instructions</a>
+                <a href="#screensinfo" class="helpdoc-breadcrumb">Screenshots</a>
+                <a href="#inunininfo" class="helpdoc-breadcrumb">Installation/Uninstallation</a>
+                <a href="#knownissueinfo" class="helpdoc-breadcrumb">Known Issues</a>
+                <a href="#contactinfo" class="helpdoc-breadcrumb">Contact</a>
+                <a href="#versionhistoryinfo" class="">Version History</a>
+            <div class="clear"></div>
+        </div><div class="helpdoc-element description">
+            <div class="clear"></div>
+            <h1 id="description">Description</h1>
+            <div class="helpdoc-text">
+
+<h3 id="layers">Layers</h3>
+<p>Skinning
+layers are a central feature of ngSkinTools. With them, you break your rig down
+into easier manageable parts and edit them separately, then blend everything
+together through layer transparency.</p>
+<p>They’re
+not just a simple way to make your work more organized - they also physically
+isolate groups of influences from the rest of the rig, so paint and edit
+operations won’t mix-in influences you were not expecting. This also allows you
+to do things that were impossible before: per-layer mirroring, adjusting
+influence weight up/down through layer transparency, blend transferred weights
+with previous weights, to name a few.</p>
+
+<h3 id="viewport-tools">Viewport
+tools</h3>
+<p>Just
+like in the previous version, ngSkinTools brings its own weight painting tools.
+Improving viewport experience is the main focus of V2, and it's complete revamp
+over the previous implementation.</p>
+<ul>
+  <li>Selecting
+  influences on screen, a #1 requested feature from users, is nowhere. Just hold
+  “S” and drag over the surface to select dominant influence from that part of
+  the mesh, or hover over a joint pivot to select precisely the joints you
+  want;</li>
+  <li>In
+  addition to the usual surface projection mode for the brush, the new “screen”
+  brush projection mode is useful when you want to quickly set weights for both
+  sides of the mesh;</li>
+  <li>Custom
+  shortcuts while in paint mode allow for quick access to intensity
+presets;</li>
+  <li>Color
+  feedback is now provided through VP2 APIs, greatly improving the performance
+  of displayed meshes.</li></ul><br>
+
+<h3 id="smoothing">Smoothing</h3>
+<p>Keeping
+weights in harmony with each other is not easy. ngSkinTools help you smooth
+weights with the control you need, allowing you to control the intensity, number
+of iterations and effective radius. For very dense meshes, added “iterations”
+argument now allows for the quicker spread of smoothness over larger areas of
+the mesh.</p>
+<p>The
+“relax” tool from V1 is gone. With major performance rework, you’ll notice that
+simple flood-smoothing is now much faster and should be a near-instant operation
+even with large meshes.</p>
+<p>The
+opposite “brother” of smooth brush, “sharpen”, is also there - for cases where
+you want to just bring out the dominant influences</p>
+
+<h3 id="mirroring">Mirroring</h3>
+<p>Mirroring
+is one of the most frequent automated tasks you might want from your skinning
+tool. With ngSkinTools, you’ll be able to:</p>
+<ul>
+  <li>Mirror
+  rigs in any pose; no need to switch to T-pose;</li>
+  <li>Have
+  granular control over left/right/center influences mapping, matching
+  left/right joints by naming convention, joint labels, etc;</li>
+  <li>Easily
+  mirror parts of your rig by leveraging layers;</li>
+  <li>Automatic
+  mirroring of weights to the opposite side as you paint so that you don’t need
+  to get distracted from painting while working on symmetrical layers.</li></ul><br>
+
+<h3 id="layer-effects">Layer
+effects</h3>
+<p>With
+the “mirror as a layer effect” feature, ngSkinTools introduce a new concept to
+ngSkinTools - layer effects. This differs from automatic mirroring of weights as
+it’s not directly modifying your layer weights; instead, it’s a post-effect that
+happens in the background buffer. This has multiple benefits, like a much
+cleaner seamline of left/right sides, the ability to tweak mirroring settings
+AFTER weights are painted, etc.</p>
+
+<h3 id="compatibility">Compatibility</h3>
+<p>As
+it's predecessor, ngSkinTools2 operates on standard Maya skinCluster (also known
+as “smooth skin”), so no custom nodes will be required to use your rig. The
+plugin has a couple of custom nodes, but they’re only required while you work on
+setting up your skin weights and can be deleted after, so your work should stay
+compatible with most pipelines out there.</p>
+
+<h3 id="performance">Performance</h3>
+<p>A
+lot of speed improvements have been made since V2, like improving the
+utilization of modern multi-core processors, or eliminating bottlenecks through
+much heavier use of performance profiling. Having a responsive, snappy tool is
+always a pleasure to work with.</p></div></div>
+
+
+        <div class="helpdoc-element ">
+            <div class="clear"></div>
+            <h1 id="generalinfo">General Usage Instructions</h1>
+            <div class="helpdoc-text"><p>The installer from Autodesk App Store loads the application under the Custom shelf.</p>
+<p><a href="http://www.ngskintools.com/docs"target="_blank">http://www.ngskintools.com/docs/</a></p></div>
+        </div>
+
+
+        <div id="helpdoc-element-screenshot" class="helpdoc-element ">
+            <div class="clear"></div>
+            <h1 id="screensinfo">Screenshots</h1>
+            <div>
+                        <div class="helpdoc-screenshot">
+                            <a href="./Resources/original_89910fa8-2c30-4376-a905-12c8a003d16b_.png" title="" data-mime="Image" rel="gallery">
+                                <div class="helpdoc-img-container">
+                                    <span class="helper"></span>
+                                    <img class="helpdoc-screenshot-img" src="./Resources/original_89910fa8-2c30-4376-a905-12c8a003d16b_.png">
+                                    <span class="helper"></span>
+                                </div>
+                            </a>
+
+                        </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="helpdoc-command helpdoc-element helpdoc-element-hidden">
+            <div class="clear"></div>
+            <h1 id="commandinfo">Commands</h1>
+            <div>
+            </div>
+        </div>
+
+
+        <div class="helpdoc-element ">
+            <div class="clear"></div>
+            <h1 id="inunininfo">Installation/Uninstallation</h1>
+            <div class="helpdoc-text"><div id="pills-tabContent">
+<div id="pills-windows">
+<p>The installer that ran when you downloaded this plug-in from Autodesk App Store has already installed the plug-in. Windows only: To uninstall this plug-in, simply rerun the installer downloaded, and select the 'Uninstall' button, or you can uninstall it from 'Control Panel\Programs\Programs and Features', just as you would uninstall any other application from your system. The panel on the Plug-ins tab will not be removed until Maya is restarted.</p>
+</div>
+</div>
+<p>Linux and OSX: To uninstall this plug-in, simply delete the module directory from your system. The panel on the Plug-ins tab will not be removed until Maya is restarted.</p>
+<div id="pills-tabContent">
+<div id="pills-windows">
+<p>Download .msi and run it on your computer. The installation will place files in&nbsp;<code>C:\ProgramData\Autodesk\ApplicationPlugins\ngskintools2</code>&nbsp;(unless your&nbsp;<code>%ProgramData%</code>&nbsp;the environment variable is different).</p>
+</div>
+</div>
+<p>Using an autoloader system, nothing needs to be configured additionally. Maya scans autoloader locations for plugins at startup and configures each discovered plugin automatically. The autoloader will create a “ngSkinTools2” shelf with a button to open UI.</p>
+<p>Now, restart Maya and a new tab&nbsp;ngSkinTools2&nbsp;should appear on your shelf.</p></div>
+        </div>
+
+<h3>Available on</h3>
+	<table>
+		<tr><td><img height=48 src="./Resources/win64.png" /></td><td><img height=48 src="./Resources/macos64.png" /></td><td><img height=48 src="./Resources/linux64.png" /></td></tr>
+		<tr><td align="center">Windows</td><td align="center">Mac OSX</td><td align="center">Linux</td></tr>
+	</table>
+
+        <div class="helpdoc-element helpdoc-element-hidden">
+            <div class="clear"></div>
+            <h1 id="addinfo">Additional Information</h1>
+            <div class="helpdoc-text"></div>
+        </div>
+
+
+        <div class="helpdoc-element ">
+            <div class="clear"></div>
+            <h1 id="knownissueinfo">Known Issues</h1>
+            <div class="helpdoc-text"><p>For upcoming features and bugfixes, visit <a href="http://ngskintools.com/v2/roadmap"target="_blank">ngSkinTools v2 public roadmap</a>.</p></div>
+        </div>
+
+
+        <div class="helpdoc-element ">
+            <div class="clear"></div>
+            <h1 id="contactinfo">Contact</h1>
+            <div>
+
+                <div>
+                    <div class="">Company Name: Viktoras Makauskas</div>
+                    <div class="">Company URL: <a href="http://www.ngskintools.com/" target="_blank">http://www.ngskintools.com</a></div>
+                    <div class="">Support Contact: <a href="mailto:support@ngskintools.com">support@ngskintools.com</a></div>
+                </div>
+
+                <div class="helpdoc-block ">
+                    <div class="clear"></div>
+                    <h1 id="authorinfo">Author/Company Information</h1>
+                    <div class="helpdoc-text">Viktoras Makauskas</div>
+                </div>
+
+                <div class="helpdoc-block ">
+                    <div class="clear"></div>
+                    <h1 id="supportinfo">Support Information</h1>
+                    <div class="helpdoc-text"><p>If you have a problem, a question, a feature request, let me know. Your feedback is what drives the project forward!<strong>&nbsp;</strong></p>
+<p><strong>Documentation</strong></p>
+<p>Features, tutorials &amp; FAQ available at <a href="http://ngskintools.com/v2/" target="_blank">ngSkinTools official website</a>.&nbsp;</p>
+<p><strong>Contact in private</strong></p>
+<p>Use the <a href="http://ngskintools.com/contact/" target="_blank">online contact form</a> or email to <a href="mailto:support@ngskintools.com">support@ngskintools.com</a>.</p></div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="helpdoc-version helpdoc-element">
+                <div class="clear"></div>
+                <h1 id="versionhistoryinfo">Version History</h1>
+                <div>
+                    <table class="helpdoc-table" id="helpdoc-table-version">
+                        <colgroup>
+                            <col style="width:150px">
+                            <col style="width:680px">
+                        </colgroup>
+                        <tbody><tr>
+                            <th>Version Number</th>
+                            <th>Version Description</th>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        2.0.24
+                                    </p>
+                                </td>
+                                <td style="white-space: pre-wrap;">2.0.23 (2021-Mar-12)
+* Fixed: stylus pressure is not updated during the stroke;
+* Fixed: Maya crashes when smoothing an empty layer with "adjust existing influences only";
+* Fixed: (regression) UI is not opening on macOS;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        2.0.23
+                                    </p>
+                                </td>
+                                <td style="white-space: pre-wrap;">2.0.23 (2021-Mar-10)
+* Added: adjustable brush size: don't reset to zero when changing brush size in the viewport.
+* Added: randomize influence colors in paint/display settings;
+* Added: layers on/off "eye" button in layers tree UI;
+* Fixed: ngSkinTools will not modify skinCluster's `normalizeWeights` value anymore; for performance boost, you still
+  can disable skinCluster's normalization by setting `normalizeWeights=None`. In "normalizeWeights:interactive"
+  skinCluster mode, Maya will no longer complain that "The weight total would have exceeded 1.0". ngSkinTools will try
+  extra hard to normalize each vertex to a perfect 1.0;
+* Fixed: UI is not displayed correctly on high DPI displays when UI scaling is enabled in Maya;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
+                                        2.0.22
+                                    </p>
+                                </td>
+                                <td style="white-space: pre-wrap;">2.0.22 (2021-Feb-06)
+    Added: convenience tool for adding influences to existing skin clusters. Select influences, target mesh and select “Tools | Add Influence”;
+    Fixed: weights will now display properly when viewport option “use default material” is turned on;
+    Added: (v1 feature) Limit max influences per vertex before writing to skin cluster;
+    Added: (v1 feature) Prune small weights before writing to skin cluster.
+
+2.0.21 (2021-Jan-11)
+    Added: copy/paste vertex weights between different selections (tab “tools” - “copy component weights/paste average component weights”);
+    Added: tool “fill transparency” - for all empty vertices in a layer, assign weights from closest non-empty vertex;
+    Added: “duplicate layer” operation;
+    Added: “Merge layers” operation: combine selected layers into one.
+
+2.0.20 (2020-Dec-02)
+    Fixed: Linux: crashing on startup
+
+2.0.19 (2020-Nov-28)
+    Added: influences mapping in mirror screen will now allow matching joints by DG connections; if symmetrical joints are linked between themselves with message connections, ngSkinTools will be able to leverage that information when mirroring weights;
+    Added: symmetry mesh: an option to provide an alternative mesh for calculating vertex mapping for mirroring;
+    Fixed: deleting visibility node can crash Maya sometimes, e.g. switching to component mode (F8) while paint tool is active
+
+2.0.18 (2020-Nov-20)
+    Added: “use all joints” option for “weights from closest joint” tool; few internal optimizations to speedup operation;
+    Added: “weights from closest joint” option: create a new layer
+    Fixed: “weights from closest joint”: the tool is only using joints as spots, but not as segments;
+    Fixed: after “weights from closest joint” operation influences list is not refreshed;
+    Fixed: “weights from closest joint”: “assign” button sometimes disabled;
+
+2.0.17 (2020-Nov-19)
+    Fixed: “resume in workspace” error while opening UI
+
+2.0.16 (2020-Nov-15)
+    Added: skin data will be compressed for ngSkinTools data nodes, which should substantially reduce file size for scenes with lots of skinning layers;
+    Added: paint mode intensity sliders are now exponential: “smooth”, “add” and “sharpen” sliders will now be more precise for lower values, and “scale” mode will allow for more precision when setting high values.
+
+2.0.15 (2020-Nov-10)
+    Added: new “Set Weights” tab contains tools to apply weights to vertex/edge/polygon selection instead of painting.
+    Added: a new option for smooth tool - “only adjust existing vertex influences”; when this is turned on, the smooth tool will prevent influences weights spreading across the surface
+    Fixed: layer mirror effects correctly saved/loaded in files;
+    Fixed: mask mirror effect was not correctly used by layer blending engine
+
+2.0.14 (2020-Oct-04)
+    Fixed: occasional crashes when using mirror effect on layers;
+    Additional stability fixes.
+
+2.0.13 (2020-Oct-04)
+    Fixed: minor bug in 2.0.12 blocks UI from opening;
+
+2.0.12 (2020-Oct-03)
+    Added: option to view used influences in influences list;
+    Added: hide “DQ weights” channel in influences list if skin cluster skinning method is not set to “Weight Blended”;
+
+2.0.11 (2020-Oct-01)
+    Fixed: broken Linux builds
+
+2.0.10 (2020-Sep-26)
+    Added: pressing “f” while painting focuses viewport camera to current paint target; for joints and other influences, the current joint pivot is used as camera interest point; when current paint target is a mask, viewport centers around painted values;
+    Fixed: influence mapping UI error if some influences are no joints;
+
+2.0.9 (2020-Sep-11)
+    Fixed: undo paint crashing Maya;
+    Fixed: incorrect brush behavior with multiple viewports open;
+    Fixed: incorrect mesh display / VP2 transparency setting sensitive;
+    Fixed: clearing selection while painting does not update the display of current mesh;</td>
+                            </tr>
+                    </tbody></table>
+                </div>
+            </div>
+
+
+    </div>
+</div></body></html>
